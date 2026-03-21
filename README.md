@@ -138,7 +138,7 @@ Key Principles:
 * Mac mini (or any always-on computer)
 * [OpenClaw](https://openclaw.ai) installed
 * Claude Pro subscription ($20/mo)
-* MiniMax API (free tier)
+* MiniMax API ($200/year plan)
 
 ### Installation
 
