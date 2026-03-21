@@ -1,0 +1,23 @@
+# Credentials & secrets
+*.json
+!**/references/*.json
+!**/_meta.json
+agent-bot-tokens.json
+auth*.json
+
+# Browser data
+user-data/
+.cache/
+
+# Sessions & logs
+sessions/
+logs/
+*.log
+
+# Node
+node_modules/
+.next/
+
+# OS
+.DS_Store
+*.swp

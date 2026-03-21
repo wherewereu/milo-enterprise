@@ -1,0 +1,35 @@
+{
+  "name": "qdrant-query",
+  "version": "1.0.0",
+  "description": "Query Qdrant vector database for semantic search",
+  "triggers": [
+    "search my knowledge",
+    "query qdrant",
+    "search rag",
+    "search my notes",
+    "search my memory",
+    "list qdrant",
+    "qdrant collection"
+  ],
+  "commands": [
+    {
+      "name": "search",
+      "description": "Semantic search against the knowledge base",
+      "args": ["query"]
+    },
+    {
+      "name": "list",
+      "description": "List all available collections"
+    },
+    {
+      "name": "info",
+      "description": "Get collection information",
+      "args": ["collection"]
+    }
+  ],
+  "env": {
+    "QDRANT_HOST": "192.168.0.247",
+    "QDRANT_PORT": "6333",
+    "QDRANT_COLLECTION": "hydra-rag"
+  }
+}
