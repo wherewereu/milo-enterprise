@@ -4,6 +4,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
@@ -32,6 +33,7 @@
  <li><a href="#about-the-project">About The Project</a></li>
  <li><a href="#the-team">The Team</a></li>
  <li><a href="#architecture">Architecture</a></li>
+ <li><a href="#discord-channels">Discord Channels</a></li>
  <li><a href="#skills">Skills</a></li>
  <li><a href="#getting-started">Getting Started</a></li>
  <li><a href="#usage">Usage</a></li>
@@ -45,7 +47,7 @@
 
 ## About The Project
 
-Milo Enterprise is a multi-agent AI system running on a dedicated Mac mini. One orchestrator (Milo) coordinates seven specialist agents to handle the chaos of daily life — from scheduling meetings to ordering groceries to reviewing code.
+Milo Enterprise is a multi-agent AI system running on a dedicated Mac mini. One orchestrator (Milo) coordinates seven specialist sub-agents to handle the chaos of daily life — from scheduling meetings to ordering groceries to reviewing code.
 
 Key Principles:
 - 🎯 Specialization over generalization — Each agent does one thing exceptionally well
@@ -75,7 +77,7 @@ Key Principles:
 | 🛒 | Eris | Procurement Agent | Instacart, Amazon, DoorDash orders |
 | ⚒️ | Hephaestus (Heph) | Coding Agent | Writes code, builds features, iterates |
 | 💪 | Heracles (Herc) | Health & Wellness | Water tracking, sleep, fitness goals |
-| 📧 | Mercury (Merc) | Communications | Email management, drafts, LinkedIn posts |
+| 📧 | Mercury (Merc) | Communications Agent | Email management, drafts, LinkedIn posts |
 | ⚖️ | Themis (Theo) | Code Reviewer | Reviews all code before shipping |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -84,33 +86,62 @@ Key Principles:
 
 ## Architecture
 
+```
+┌─────────────────────────────────────────────────────────────┐
+│ JUSTINE                                                       │
+│ (The Human™)                                                  │
+└─────────────────────┬───────────────────────────────────────┘
+                     │
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 🐕 MILO                                                        │
+│ Orchestrator & CEO                                            │
+│ iMessage • Discord • Telegram                                  │
+└─────────────────────┬───────────────────────────────────────┘
+                     │
+     ┌───────────────┼────────────────┐
+     ▼               ▼                ▼
+┌───────────┐  ┌───────────┐  ┌───────────┐
+│ Archie    │  │ Atro      │  │ Eris      │
+│ Research  │  │ Calendar  │  │ Shopping  │
+└───────────┘  └───────────┘  └───────────┘
+     ▼               ▼                ▼
+┌───────────┐  ┌───────────┐  ┌───────────┐
+│ Merc      │  │ Herc      │  │ Heph→Theo │
+│ Comms     │  │ Health    │  │Code Review│
+└───────────┘  └───────────┘  └───────────┘
 
 ┌─────────────────────────────────────────────────────────────┐
-│ JUSTINE │
-│ (The Human™) │
-└─────────────────────┬───────────────────────────────────────┘
- │
- ▼
-┌─────────────────────────────────────────────────────────────┐
-│ 🐕 MILO │
-│ Orchestrator & CEO │
-│ iMessage • Discord • Telegram │
-└─────────────────────┬───────────────────────────────────────┘
- │
- ┌─────────────┼─────────────┐
- ▼ ▼ ▼
-┌───────────┐ ┌───────────┐ ┌───────────┐
-│ Archie │ │ Atro │ │ Eris │
-│ Research │ │ Calendar │ │ Shopping │
-└───────────┘ └───────────┘ └───────────┘
+│ DISCORD                                                        │
+│ Command Center • Round-Table • Break Room                     │
+│ (per-agent output/logs/memory channels)                       │
+└─────────────────────────────────────────────────────────────┘
+```
 
- ┌─────────────┼─────────────┐
- ▼ ▼ ▼
-┌───────────┐ ┌───────────┐ ┌───────────┐
-│ Herc │ │ Merc │ │ Heph→Theo │
-│ Health │ │ Comms │ │Code Review│
-└───────────┘ └───────────┘ └───────────┘
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
+
+## Discord Channels
+
+Discord is the **Command Center** — every agent posts delegation events, task completions, and errors to dedicated channels.
+
+| Channel | ID | Purpose | Logs/Memory |
+|---------|-----|---------|-------------|
+| 🎯 Command Center | 1483891285822537740 | Strategic planning, delegation, results | No |
+| 🗣️ Round-Table | 1483982757523750942 | Open team discussion | No |
+| 💬 Break Room | 1485043346132045824 | Agent casual chat | No |
+| 🔍 Research Output | 1483891301773480017 | Archie results | Yes |
+| 📧 Comms Output | 1483891383700820132 | Merc results | Yes |
+| 🛒 Procurement Output | 1483891385458491402 | Eris results | Yes |
+| 📅 Temporal Output | 1483891386783629322 | Atro results | Yes |
+| 💪 Wellness Output | 1483891388184526919 | Herc results | Yes |
+| ⚒️ Code Output | 1483944411795816641 | Heph results | No |
+| ⚖️ Review Output | 1483944415985930300 | Theo results | No |
+
+**Round-Table and Break Room have NO logs/memory channels** — they're casual collaboration spaces.
+
+Full bot/token setup in `~/.openclaw/agent-bot-tokens.json`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,13 +152,21 @@ Key Principles:
 | Skill | Description |
 |-------|-------------|
 | agent-browser | Headless browser automation with accessibility tree |
+| archimedes | Research agent — web search, fact-checking, deep dives |
+| atropos | Calendar agent — scheduling, reminders, time management |
+| eris | Procurement agent — orders, Instacart, Amazon |
+| heracles | Health agent — water, sleep, fitness tracking |
+| hephaestus | Code agent — writes and iterates on code |
+| merc-linkedin-daily | Daily LinkedIn post workflow |
+| mercury | Communications agent — email, drafts, LinkedIn |
+| themis | Code review — reviews all Hephaestus output |
 | diet-tracker | Calorie counting and nutrition tracking |
 | expense-tracker | Budget management and spending insights |
 | proactive-agent | Memory architecture, self-healing, reverse prompting |
 | instacart | Grocery ordering automation |
 | image-collector | Image search and collection |
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top)</a></p>
 
 ---
 
@@ -139,23 +178,33 @@ Key Principles:
 * [OpenClaw](https://openclaw.ai) installed
 * Claude Pro subscription ($20/mo)
 * MiniMax API ($200/year plan)
+* Discord server with bot tokens per agent
 
 ### Installation
 
 1. Clone the repo
- 
+
+ ```bash
  git clone https://github.com/wherewereu/milo-enterprise.git
- 
+ ```
+
 2. Copy environment template
- 
+
+ ```bash
  cp .env.example .env
- 
-3. Configure your agent tokens
- 
+ ```
+
+3. Set up Discord bots (see `agent-delegation-system-readme.md` in workspace for full Discord setup)
+
+4. Configure agent tokens
+
+ ```bash
  nano ~/.openclaw/agent-bot-tokens.json
- 
-4. Install OpenClaw
- 
+ ```
+
+5. Install OpenClaw
+
+ ```bash
  npm install -g openclaw
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -164,16 +213,27 @@ Key Principles:
 
 ## Usage
 
+### Discord Posting
+```bash
+# Post to round-table (default)
+python3 discord-post.py Milo "Hello from Milo!"
 
-# Discord posting
-python discord-post.py milo "Hello from Milo!" --channel 1234567890
+# Post to specific channel
+python3 discord-post.py Milo "Hello" --channel 1483891285822537740
 
-# Backup to iCloud
+# Reply to a message
+python3 discord-post.py Archie "Research complete" --reply-to 1234567890
+```
+
+### Backup to iCloud
+```bash
 ./backup.sh
+```
 
-# Twitch monitoring
+### Twitch Monitoring
+```bash
 python twitch-poller.py
-
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,7 +242,7 @@ python twitch-poller.py
 ## Roadmap
 
 - [x] 8-agent team setup
-- [x] Discord integration
+- [x] Discord integration (Command Center, Round-Table, Break Room)
 - [x] Code review pipeline (Heph → Theo)
 - [ ] Voice interface via Alexa
 - [ ] Multi-user support
@@ -215,6 +275,8 @@ Justine Delano - AI Engineer | Incident Manager @ Amazon
 
 ---
 
+<!-- MARKDOWN LINKS & IMAGES -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/wherewereu/milo-enterprise.svg?style=for-the-badge
 [contributors-url]: https://github.com/wherewereu/milo-enterprise/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/wherewereu/milo-enterprise.svg?style=for-the-badge
@@ -223,5 +285,7 @@ Justine Delano - AI Engineer | Incident Manager @ Amazon
 [stars-url]: https://github.com/wherewereu/milo-enterprise/stargazers
 [issues-shield]: https://img.shields.io/github/issues/wherewereu/milo-enterprise.svg?style=for-the-badge
 [issues-url]: https://github.com/wherewereu/milo-enterprise/issues
+[license-shield]: https://img.shields.io/github/license/wherewereu/milo-enterprise.svg?style=for-the-badge
+[license-url]: https://github.com/wherewereu/milo-enterprise/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/justineadelano

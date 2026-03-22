@@ -5,8 +5,8 @@ import os
 import subprocess
 from datetime import datetime
 
-CLIENT_ID = "itebr7xehfmt443fdlw9iqsxdvjn5e"
-CLIENT_SECRET = "to9enay7npjou6xby16rpulb3oyjap"
+CLIENT_ID = os.environ.get("TWITCH_CLIENT_ID", "YOUR_TWITCH_CLIENT_ID")
+CLIENT_SECRET = os.environ.get("TWITCH_CLIENT_SECRET", "YOUR_TWITCH_CLIENT_SECRET")
 BROADCASTER_LOGIN = "zackrawrr"
 STATE_FILE = os.path.expanduser("~/.openclaw/twitch-state.json")
 
