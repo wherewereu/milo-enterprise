@@ -39,7 +39,7 @@ def save_state(state):
         json.dump(state, f)
 
 def send_imessage(msg):
-    cmd = ["osascript", "-e", f'tell application "Messages" to send "{msg}" to buddy "+16293959407"']
+    cmd = ["osascript", "-e", f'tell application "Messages" to send "{msg}" to buddy "[PHONE]"']
     subprocess.run(cmd)
 
 def main():
