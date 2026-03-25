@@ -128,16 +128,16 @@ Discord is the **Command Center** — every agent posts delegation events, task 
 
 | Channel | ID | Purpose | Logs/Memory |
 |---------|-----|---------|-------------|
-| 🎯 Command Center | 1483891285822537740 | Strategic planning, delegation, results | No |
-| 🗣️ Round-Table | 1483982757523750942 | Open team discussion | No |
-| 💬 Break Room | 1485043346132045824 | Agent casual chat | No |
-| 🔍 Research Output | 1483891301773480017 | Archie results | Yes |
-| 📧 Comms Output | 1483891383700820132 | Merc results | Yes |
-| 🛒 Procurement Output | 1483891385458491402 | Eris results | Yes |
-| 📅 Temporal Output | 1483891386783629322 | Atro results | Yes |
-| 💪 Wellness Output | 1483891388184526919 | Herc results | Yes |
-| ⚒️ Code Output | 1483944411795816641 | Heph results | No |
-| ⚖️ Review Output | 1483944415985930300 | Theo results | No |
+| 🎯 Command Center | [INSERT DISCORD CHANNEL ID] | Strategic planning, delegation, results | No |
+| 🗣️ Round-Table | [INSERT DISCORD CHANNEL ID] | Open team discussion | No |
+| 💬 Break Room | [INSERT DISCORD CHANNEL ID] | Agent casual chat | No |
+| 🔍 Research Output | [INSERT DISCORD CHANNEL ID] | Archie results | Yes |
+| 📧 Comms Output | [INSERT DISCORD CHANNEL ID] | Merc results | Yes |
+| 🛒 Procurement Output | [INSERT DISCORD CHANNEL ID] | Eris results | Yes |
+| 📅 Temporal Output | [INSERT DISCORD CHANNEL ID] | Atro results | Yes |
+| 💪 Wellness Output | [INSERT DISCORD CHANNEL ID] | Herc results | Yes |
+| ⚒️ Code Output | [INSERT DISCORD CHANNEL ID] | Heph results | No |
+| ⚖️ Review Output | [INSERT DISCORD CHANNEL ID] | Theo results | No |
 
 **Round-Table and Break Room have NO logs/memory channels** — they're casual collaboration spaces.
 
